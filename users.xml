@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userlist>
+<user id="1">
+<username>Gouse</username>
+<address>DSNR</address>
+<phone>8801550101</phone>
+</user>
+
+<user id="2">
+<username>D Divakar</username>
+<address>Ameerpet</address>
+<phone>9888888888</phone>
+</user>
+
+<user id="3">
+<username>Rajinth</username>
+<address>SR Nagar</address>
+<phone>9866666666</phone>
+</user>
+
+<user id="4">
+<username>M Vijaya</username>
+<address>DESHMUKHI</address>
+<phone>9835994445</phone>
+</user>
+
+<user id="5">
+<username>Kusuma</username>
+<address>KOTI</address>
+<phone>968877555</phone>
+</user>
+
+ <user id="6">
+<username>P Kalpana</username>
+<address>KOTI</address>
+<phone>968875554</phone>
+</user>
+
+<user id="7">
+<username>V Anitha</username>
+<address>KPHB</address>
+<phone>968888554</phone>
+</user>
+
+
+<user id="8">
+<username>M Ramesh</username>
+<address>IBP</address>
+<phone>968878554</phone>
+</user>
+
+<user id="9">
+<username>Raswitha</username>
+<address>DSNGR</address>
+<phone>968899554</phone>
+</user>
+
+<user id="10">
+<username>A Prasanna</username>
+<address>KPHB</address>
+<phone>9088008554</phone>
+</user>
+</userlist>
