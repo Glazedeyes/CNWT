@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function creditvalidate() {
+        var flag = 1;
+        var uid = document.myform.id.value;
+        var pwd = document.myform.pwd.value;
+        var amt = document.myform.amount.value;
+        var cc = document.myform.cc.value;
+        if (uid.length == "" || uid == null) {
+          window.alert("Enter User ID!");
+          document.myform.focus();
+          return false;
+        }
+        if (pwd.length == "") {
+          window.alert("Enter Password!");
+          document.myform.focus();
+          return false;
+        }
+        if (amt.length == "") {
+          window.alert("Enter Amount!");
+          document.myform.focus();
+          return false;
+        }
+
+        if (cc.length == "") {
+          window.alert("Enter Creditcard number!");
+          document.myform.focus();
+          return false;
+        }
+        var x;
+        for (var i = 0; i < amt.length; i++) {
+          x = amt.substr(i, 1);
+          if (!(x <= 9)) {
+            flag = 0;
+            break;
+          }
+        }
+
+        for (var i = 0; i < cc.length; i++) {
+          x = cc.substr(i, 1);
+          if (!(x <= 9)) {
+            flag = 0;
+            break;
+          }
+        }
+        if (flag == 0) {
+          window.alert("INVALID INPUT");
+          document.myform.focus();
+          return false;
+        } else {
+          window.alert("Valid input and Submitted Successfully!");
+          document.myform.focus();
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body bgcolor="lightGreen">
+    <form name="myform" onSubmit="return creditvalidate()">
+      <h1 align="center">Credit card Payment</h1>
+      <table align="center" cellpadding="5">
+        <tr>
+          <td>Login/User ID:</td>
+          <td><input type="text" name="id" /></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="pwd" /></td>
+        </tr>
+        <tr>
+          <td>Enter Amount:</td>
+          <td><input type="text" name="amount" /></td>
+        </tr>
+        <tr>
+          <td>Credit Card Number:</td>
+          <td><input type="text" name="cc" /></td>
+        </tr>
+
+        <tr>
+          <td align="center" colspan="2">
+            <input type="submit" value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Cancel" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

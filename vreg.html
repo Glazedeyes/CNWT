@@ -1,0 +1,93 @@
+<html> 
+<head> 
+<title> Registration Page</title> 
+<script type="text/javascript">
+ function checkRegistration()
+{
+         var uname=document.forms["registration"]["user"];
+	  var password1=document.forms["registration"]["pwd1"];
+	  var password2=document.forms["registration"]["pwd2"];
+         var gender=document.forms["registration"]["a"];
+         var email=document.forms["registration"]["email"];
+         var address=document.forms["registration"]["address"];
+
+      if (uname.value=="")
+     {
+                       window.alert("Please enter your username");
+                       name1.focus();
+                        return false;
+      }
+      if (password1.value=="")
+      {
+                        window.alert("Please enter your password");
+                        password1.focus();
+                        return false;
+       }
+          if (password2.value=="")
+          {
+                        window.alert("Please re-enter your password");
+                        password2.focus();
+                        return false;
+            }
+            if (password1.value!=password2.value)
+            {
+                        window.alert("Both passwords should match!!");
+                        password2.focus();
+                        return false;
+             }
+  	     if ((gender[0].checked==false)&&(gender[1].checked==false))
+            {
+                        window.alert("Please enter gender!");
+                        //gender.focus();
+                        return false;
+             }
+
+            if (email.value=="")
+              {
+                        window.alert("Please enter your email id!");
+                        email.focus();
+                        return false;
+                }
+                if (email.value.indexOf("@", 0)<0)
+               {
+                        window.alert("Please enter a valid email");
+                        email.focus();
+                        return false;
+                }
+                if (email.value.indexOf(".", 0)<0)
+               {
+                        window.alert("Please enter a valid email");
+                        email.focus();
+                        return false;
+                 }
+                
+                if (address.value=="")
+                {
+                        window.alert("Please enter your address");
+                        address.focus();
+                        return false;
+                 }
+                 return true;
+}
+</script>
+</head>
+
+<body> 
+<form name="registration" onsubmit="return checkRegistration()"> 
+<h1 align="center">Registration Form</h1>
+<table cellpadding="5" align="center">
+<tr><td>User Name:</td> <td> <input type="text" name="user"/></td></tr>
+<tr><td>Password: </td> <td><input type="password" name="pwd1"/> </td></tr> 
+<tr><td>Confirm Password: </td> <td><input type="password" name="pwd2"/> </td></tr>
+<tr><td>Gender: </td> <td><input type="radio" name="a"/>Male 
+<input type="radio" name="a"/>Female</td></tr> 
+<tr> <td>Email-ID: </td> <td><input type="text" name="email"/> </td></tr> 
+<tr> <td>Address: </td> <td><textarea name="address" rows="5" cols="20"/></textarea> </td></tr> 
+<tr> <td colspan="2" align="center"> 
+<input type="submit" value="Submit"/>
+<input type="reset" value="Reset"/> 
+</td></tr> 
+</table>
+</form> 
+</body> 
+</html>
